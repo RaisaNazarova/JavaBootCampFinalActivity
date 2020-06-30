@@ -1,4 +1,7 @@
 package sef.ATestTask.ThirdActivity;
+
+import sef.ATestTask.FirstActivity.Person;
+
 //Needs to be completed
 //This program accepts a user name and checks user's validity
 //The user name is checked against an array of names.
@@ -6,10 +9,13 @@ package sef.ATestTask.ThirdActivity;
 public class ThirdActivity {
 
     public static void main(String[] args) {
-        ThirdActivity ta = new ThirdActivity();
-        //TODO handle exception on proper way
-        ta.validateUser("Ivan");
-        ta.catchExeption();
+    	Person person = new Person();
+    	person.setFirstName("ddd");
+    	
+//        ThirdActivity ta = new ThirdActivity();
+//        //TODO handle exception on proper way
+//        ta.validateUser("Ivan");
+//        ta.catchExeption();
     }
 
     void catchExeption() {
