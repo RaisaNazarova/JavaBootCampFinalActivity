@@ -69,9 +69,11 @@ public class Person {
 	//	"My name is <name> and i am <age> years old"
 	}
 	
-	public void introduce() {
-		System.out.println("My name is " + firstName + " and i am" + age + "years old");
+	public String introduce() {
+		String text = "My name is " + firstName + " and i am" + age + "years old";
+		System.out.println(text);
 		
+		return text;
 	}
 	
 	

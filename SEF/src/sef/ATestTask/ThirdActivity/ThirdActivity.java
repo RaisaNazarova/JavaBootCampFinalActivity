@@ -9,13 +9,16 @@ import sef.ATestTask.FirstActivity.Person;
 public class ThirdActivity {
 
     public static void main(String[] args) {
-    	Person person = new Person();
-    	person.setFirstName("ddd");
-    	
-//        ThirdActivity ta = new ThirdActivity();
-//        //TODO handle exception on proper way
-//        ta.validateUser("Ivan");
-//        ta.catchExeption();
+  	
+        ThirdActivity ta = new ThirdActivity();
+        //TODO handle exception on proper way
+        try {
+			ta.validateUser("Ivan");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+        ta.catchExeption();
     }
 
     void catchExeption() {
@@ -28,21 +31,35 @@ public class ThirdActivity {
 
     }
 
-    void validateUser(String name) {
+    void validateUser(String name) throws Exception {
         String[] validUsers = {"John", "Mike", "Missi", "Peacy"};
         boolean flag = false;
         //TODO if name in a list -> set flag=true
         // if at the end flag=0 -> throw the exeption
+        for (int i = 0; i < validUsers.length; i++) {
+        	if (validUsers[i].contains(name)) {
+        		flag = true;
+        	} else {
+        		flag = false;
+        		throw new Exception();
+        	}
+        }
     }
 
     void catchMe(int num1, int num2)
     {
         //TODO Catch exeption
+    	try {
             int result=num1/num2;
             System.out.println("The result is :" + result);
+    	} catch(Exception e) {
+    		System.out.println("Error");
+    	} finally {
+    		 System.out.println("Thank you for using this program.");
+    	}
 
             //TODO prints a message "Thank you for using this program." always
-            System.out.println("Thank you for using this program.");
+           
 
     }
 }

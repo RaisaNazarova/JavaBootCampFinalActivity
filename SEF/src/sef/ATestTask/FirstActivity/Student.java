@@ -13,9 +13,11 @@ public class Student extends Person{
 	}
 	
 	@Override
-	public void introduce() {
-		System.out.println("I am study in university" + schoolName);
+	public String introduce() {
+		String text = "I am study in university" + schoolName;
+		System.out.println(text);
 		
+		return text;
 	}
 	//"I am study in university <schoolName>"
 }

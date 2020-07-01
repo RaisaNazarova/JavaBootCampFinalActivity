@@ -72,9 +72,15 @@ public class Employee extends Person{
     
     //TODO 3 override method announce()
     @Override 
-	public void introduce() {
-		System.out.println("My name is " + super.getFirstName() + " and i am" + super.getAge() + "years old");
-		System.out.println("I am work as" + jobTitle + "in" + companyName); 
+	public String introduce() {
+    	String text = "My name is " + super.getFirstName() + " and i am " + super.getAge() + "years old\n";
+    	text = text + "I am work as " + jobTitle + " in " + companyName;
+    	
+    	System.out.println(text);
+    	
+    	return text;
+//		System.out.println("My name is " + super.getFirstName() + " and i am" + super.getAge() + "years old");
+//		System.out.println("I am work as" + jobTitle + "in" + companyName); 
 }
 
 
